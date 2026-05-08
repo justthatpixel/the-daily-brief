@@ -13,6 +13,10 @@
   .dark body {
     @apply bg-dark-bg text-dark-body;
   }
+  /* Prevent browser visited-link colour leaking into card titles */
+  a:visited {
+    color: inherit;
+  }
 }
 
 @layer components {

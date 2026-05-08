@@ -28,8 +28,13 @@ router.get('/', async (req, res) => {
           const article = JSON.parse(content);
           // Don't include full blocks in list view (performance)
           const { blocks, ...summary } = article;
+          // Compute excerpt from first substantial text block
+          const excerptBlock = (blocks || []).find(b => b.type === 'text' && b.content && b.content.length > 60);
+          const excerptRaw = excerptBlock ? excerptBlock.content.replace(/^[•\d]\s*/, '') : '';
+          const excerpt = excerptRaw.length > 180 ? excerptRaw.slice(0, 180) + '…' : excerptRaw;
           articles.push({
             ...summary,
+            excerpt,
             blockCount: blocks ? blocks.length : 0
           });
         } catch (e) {

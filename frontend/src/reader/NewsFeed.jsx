@@ -23,12 +23,8 @@ function formatDate(isoString) {
   return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
 
-function getExcerpt(blocks) {
-  if (!blocks) return '';
-  const para = blocks.find(b => b.type === 'text' && b.content?.length > 60);
-  if (!para) return '';
-  const text = para.content.replace(/^[•\d]\s*/, '');
-  return text.length > 180 ? text.slice(0, 180) + '…' : text;
+function getExcerpt(article) {
+  return article.excerpt || '';
 }
 
 function CategoryBadge({ category }) {
@@ -145,7 +141,7 @@ export default function NewsFeed() {
                 {featured.title}
               </h2>
               <p className="body-serif text-[15px] text-body dark:text-dark-body leading-relaxed line-clamp-3">
-                {getExcerpt(featured.blocks)}
+                {getExcerpt(featured)}
               </p>
             </div>
             <div className="flex items-center justify-between mt-6 pt-4 border-t border-border dark:border-dark-border">
@@ -220,7 +216,7 @@ export default function NewsFeed() {
                     {article.title}
                   </h3>
                   <p className="text-[14px] text-muted dark:text-dark-muted line-clamp-2 leading-relaxed">
-                    {getExcerpt(article.blocks)}
+                    {getExcerpt(article)}
                   </p>
                   <DateLabel date={article.publishedAt || article.updatedAt} />
                 </div>
