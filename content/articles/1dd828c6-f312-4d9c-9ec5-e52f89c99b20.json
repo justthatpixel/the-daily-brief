@@ -10,7 +10,7 @@
   "blocks": [
     {
       "type": "image",
-      "url": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80&auto=format&fit=crop",
+      "url": "https://images.unsplash.com/photo-1579621970590-9d152b17bcb3?w=1200&q=80&auto=format&fit=crop",
       "alt": "Markets financial news",
       "caption": ""
     },
@@ -71,5 +71,5 @@
       "content": "Traders will monitor Iranian port activity and any escalation in U.S. military positioning as oil markets brace for potential supply disruptions."
     }
   ],
-  "heroImage": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80&auto=format&fit=crop"
+  "heroImage": "https://images.unsplash.com/photo-1579621970590-9d152b17bcb3?w=1200&q=80&auto=format&fit=crop"
 }

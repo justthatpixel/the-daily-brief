@@ -15,7 +15,7 @@ export default function ReaderLayout({ darkMode, setDarkMode }) {
 
       {/* Top utility bar */}
       <div className="bg-masthead dark:bg-dark-masthead text-white text-xs">
-        <div className="max-w-5xl mx-auto px-6 py-1.5 flex items-center justify-between">
+        <div className="max-w-[1200px] mx-auto px-6 py-1.5 flex items-center justify-between">
           <span className="opacity-60">{today}</span>
           <div className="flex items-center gap-4 opacity-80">
             <button
@@ -34,7 +34,7 @@ export default function ReaderLayout({ darkMode, setDarkMode }) {
 
       {/* Masthead */}
       <header className="bg-card dark:bg-dark-card">
-        <div className="max-w-5xl mx-auto px-6 pt-6 pb-4">
+        <div className="max-w-[1200px] mx-auto px-6 pt-6 pb-4">
           <div className="border-b-2 border-t-2 border-headline dark:border-dark-headline py-4 text-center">
             <h1 className="serif text-4xl md:text-5xl font-bold tracking-tight text-headline dark:text-dark-headline leading-none">
               The Daily Brief
@@ -72,13 +72,13 @@ export default function ReaderLayout({ darkMode, setDarkMode }) {
       </header>
 
       {/* Main content */}
-      <main className="max-w-5xl mx-auto px-6 py-8">
+      <main className="max-w-[1200px] mx-auto px-6 py-8">
         <Outlet />
       </main>
 
       {/* Footer */}
       <footer className="border-t-2 border-headline dark:border-dark-headline mt-16">
-        <div className="max-w-5xl mx-auto px-6 py-8">
+        <div className="max-w-[1200px] mx-auto px-6 py-8">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div>
               <p className="serif text-xl font-bold text-headline dark:text-dark-headline">The Daily Brief</p>

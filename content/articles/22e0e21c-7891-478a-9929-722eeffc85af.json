@@ -10,7 +10,7 @@
   "blocks": [
     {
       "type": "image",
-      "url": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80&auto=format&fit=crop",
+      "url": "https://images.unsplash.com/photo-1486406529344-f9b1c5bb6ba9?w=1200&q=80&auto=format&fit=crop",
       "alt": "Markets financial news",
       "caption": ""
     },
@@ -75,5 +75,5 @@
       "content": "Traders will scrutinize the Bank of England's rate decision and accompanying commentary for signals on global monetary policy divergence."
     }
   ],
-  "heroImage": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80&auto=format&fit=crop"
+  "heroImage": "https://images.unsplash.com/photo-1486406529344-f9b1c5bb6ba9?w=1200&q=80&auto=format&fit=crop"
 }

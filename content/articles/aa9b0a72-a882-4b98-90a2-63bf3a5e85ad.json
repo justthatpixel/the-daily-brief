@@ -10,7 +10,7 @@
   "blocks": [
     {
       "type": "image",
-      "url": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&auto=format&fit=crop",
+      "url": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&q=80&auto=format&fit=crop",
       "alt": "Markets financial news",
       "caption": ""
     },
@@ -79,5 +79,5 @@
       "content": "Any escalation or de-escalation in the US-Iran standoff will dominate early trading, with crude and defense stocks leading sentiment shifts."
     }
   ],
-  "heroImage": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&auto=format&fit=crop"
+  "heroImage": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&q=80&auto=format&fit=crop"
 }
