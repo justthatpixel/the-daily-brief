@@ -118,16 +118,20 @@ router.put('/:id', async (req, res) => {
     const existing = JSON.parse(content);
     
     // Merge updates
+    const blocks = req.body.blocks !== undefined ? req.body.blocks : existing.blocks;
+    // Derive heroImage from first image block whenever blocks are updated
+    const firstImageBlock = blocks?.find(b => b.type === 'image' && b.url);
     const updated = {
       ...existing,
       title: req.body.title !== undefined ? req.body.title : existing.title,
       slug: req.body.slug !== undefined ? req.body.slug : existing.slug,
       status: req.body.status !== undefined ? req.body.status : existing.status,
       category: req.body.category !== undefined ? req.body.category : existing.category,
-      blocks: req.body.blocks !== undefined ? req.body.blocks : existing.blocks,
+      blocks,
+      heroImage: firstImageBlock ? firstImageBlock.url : existing.heroImage,
       updatedAt: new Date().toISOString()
     };
-    
+
     if (req.body.status === 'published' && !existing.publishedAt) {
       updated.publishedAt = new Date().toISOString();
     }
