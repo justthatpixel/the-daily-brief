@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +7,8 @@
 @layer base {
   body {
     @apply bg-background text-body;
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
   .dark body {
     @apply bg-dark-bg text-dark-body;
@@ -15,87 +16,155 @@
 }
 
 @layer components {
-  .serif-title {
+  /* ── Typography ── */
+  .serif {
     font-family: 'Playfair Display', Georgia, serif;
   }
-}
+  .body-serif {
+    font-family: 'Lora', Georgia, serif;
+  }
 
-@layer components {
+  /* ── Cards ── */
   .card {
-    @apply bg-card rounded-xl border border-border shadow-sm;
+    @apply bg-card rounded-none border border-border;
   }
   .dark .card {
-    @apply bg-dark-card border-gray-700;
+    @apply bg-dark-card border-dark-border;
   }
+  .card-lifted {
+    @apply bg-card border border-border shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  .dark .card-lifted {
+    @apply bg-dark-card border-dark-border;
+  }
+
+  /* ── Buttons ── */
   .btn-primary {
-    @apply px-4 py-2 bg-accent text-white rounded-lg font-medium hover:bg-blue-700 transition-colors;
+    @apply px-4 py-2 bg-accent text-white text-sm font-semibold rounded hover:bg-amber-700 transition-colors;
   }
   .dark .btn-primary {
-    @apply bg-dark-accent hover:bg-blue-600;
+    @apply bg-dark-accent text-dark-bg hover:bg-yellow-300;
   }
   .btn-secondary {
-    @apply px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors;
+    @apply px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded hover:bg-gray-200 transition-colors;
   }
   .dark .btn-secondary {
     @apply bg-gray-800 text-gray-200 hover:bg-gray-700;
   }
+  .btn-ghost {
+    @apply px-4 py-2 text-sm font-medium text-muted hover:text-headline transition-colors;
+  }
+
+  /* ── Inputs ── */
   .input {
-    @apply w-full px-4 py-2 border border-border rounded-lg bg-white text-headline;
+    @apply w-full px-3 py-2 border border-border rounded bg-white text-headline text-sm focus:outline-none focus:ring-1 focus:ring-accent-blue focus:border-accent-blue;
   }
   .dark .input {
-    @apply bg-dark-card border-gray-700 text-dark-headline;
+    @apply bg-dark-card border-dark-border text-dark-headline focus:ring-dark-accent focus:border-dark-accent;
+  }
+
+  /* ── Category badges ── */
+  .category-badge {
+    @apply inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase;
+  }
+
+  /* ── Divider ── */
+  .divider-rule {
+    @apply border-t-2 border-headline dark:border-dark-headline mb-1;
+  }
+  .divider-thin {
+    @apply border-t border-border dark:border-dark-border;
   }
 }
 
-/* TipTap Editor Styles */
-.ProseMirror {
-  @apply outline-none min-h-[300px] p-4;
+/* ── Article prose ── */
+.article-body {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: #2D2D2D;
 }
-.ProseMirror h1 {
-  @apply text-3xl font-bold mb-4 text-headline;
+.dark .article-body {
+  color: #A8A49D;
 }
-.ProseMirror h2 {
-  @apply text-2xl font-semibold mb-3 text-headline;
+.article-body p {
+  margin-bottom: 1.4em;
 }
-.ProseMirror h3 {
-  @apply text-xl font-semibold mb-2 text-headline;
+.article-body h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0D0D0D;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
 }
-.ProseMirror p {
-  @apply mb-4 leading-relaxed;
+.dark .article-body h2 {
+  color: #F0EDE8;
 }
-.ProseMirror blockquote {
-  @apply border-l-4 border-accent pl-4 italic text-body;
+.article-body h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0D0D0D;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
-.ProseMirror img {
-  @apply max-w-full h-auto rounded-lg my-4;
+.dark .article-body h3 {
+  color: #F0EDE8;
 }
-.ProseMirror hr {
-  @apply border-t border-border my-6;
+.article-body blockquote {
+  border-left: 3px solid #B45309;
+  padding: 0.5rem 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #0D0D0D;
 }
-.ProseMirror p.is-editor-empty:first-child::before {
-  @apply text-gray-400 content-[attr(data-placeholder)];
+.dark .article-body blockquote {
+  border-left-color: #FBBF24;
+  color: #F0EDE8;
+}
+.article-body hr {
+  border: none;
+  border-top: 1px solid #DDD8CF;
+  margin: 2.5rem 0;
 }
 
-/* Pipeline terminal styles */
+/* ── Pipeline terminal ── */
 .terminal {
-  @apply bg-gray-900 text-green-400 font-mono text-sm p-4 rounded-lg overflow-auto;
-}
-.dark .terminal {
-  @apply bg-black;
+  @apply bg-gray-950 text-green-400 font-mono text-sm p-4 rounded overflow-auto;
 }
 .terminal .log-info { @apply text-blue-400; }
 .terminal .log-success { @apply text-green-400; }
 .terminal .log-warning { @apply text-yellow-400; }
 .terminal .log-error { @apply text-red-400; }
 
-/* Step indicators */
-.step-indicator {
-  @apply flex items-center gap-2;
-}
-.step-dot {
-  @apply w-3 h-3 rounded-full;
-}
-.step-dot.idle { @apply bg-gray-300; }
+/* ── Step indicators ── */
+.step-dot { @apply w-2.5 h-2.5 rounded-full; }
+.step-dot.idle { @apply bg-gray-300 dark:bg-gray-700; }
 .step-dot.running { @apply bg-amber-500 animate-pulse; }
 .step-dot.done { @apply bg-green-500; }
 .step-dot.error { @apply bg-red-500; }
+
+/* ── TipTap editor ── */
+.ProseMirror {
+  @apply outline-none min-h-[300px] p-4;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.ProseMirror h1 { @apply text-3xl font-bold mb-4; font-family: 'Playfair Display', serif; }
+.ProseMirror h2 { @apply text-2xl font-semibold mb-3; font-family: 'Playfair Display', serif; }
+.ProseMirror h3 { @apply text-xl font-semibold mb-2; font-family: 'Playfair Display', serif; }
+.ProseMirror p { @apply mb-4 leading-relaxed; }
+.ProseMirror blockquote { @apply border-l-4 border-accent pl-4 italic; }
+.ProseMirror img { @apply max-w-full h-auto rounded my-4; }
+.ProseMirror hr { @apply border-t border-border my-6; }
+.ProseMirror p.is-editor-empty:first-child::before {
+  @apply text-gray-400;
+  content: attr(data-placeholder);
+  float: left;
+  pointer-events: none;
+  height: 0;
+}
