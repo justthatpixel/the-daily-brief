@@ -111,8 +111,8 @@ export default function NewsFeed() {
   }
 
   const [featured, ...rest] = articles;
-  const sidebar = rest.slice(0, 3);
-  const secondary = rest.slice(3);
+  const sidebar = rest.slice(0, 5);
+  const secondary = rest.slice(5);
 
   return (
     <div className="space-y-12">
@@ -126,7 +126,7 @@ export default function NewsFeed() {
           className="md:col-span-2 flex flex-col border-b md:border-b-0 md:border-r border-border dark:border-dark-border group bg-white dark:bg-dark-card hover:bg-gray-50 dark:hover:bg-dark-card/80 transition-colors"
         >
           {featured.heroImage && (
-            <div className="overflow-hidden" style={{ aspectRatio: '16/9' }}>
+            <div className="overflow-hidden flex-1 min-h-0" style={{ minHeight: '220px' }}>
               <img
                 src={featured.heroImage}
                 alt={featured.title}
@@ -134,7 +134,7 @@ export default function NewsFeed() {
               />
             </div>
           )}
-          <div className="p-7 flex flex-col flex-1 justify-between">
+          <div className="p-7 flex-shrink-0 flex flex-col justify-between">
             <div>
               <CategoryBadge category={featured.category} />
               <h2 className="serif text-2xl md:text-3xl font-bold text-headline dark:text-dark-headline leading-tight mt-3 mb-4 group-hover:text-accent dark:group-hover:text-dark-accent transition-colors">

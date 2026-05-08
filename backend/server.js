@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 const frontendPath = path.join(__dirname, '../frontend');
 const distPath = path.join(frontendPath, 'dist');
 app.use(express.static(distPath));
-app.use(express.static(path.join(__dirname, '../content/assets')));
+app.use('/assets', express.static(path.join(__dirname, '../content/assets')));
 
 // API Routes
 app.use('/api/pipeline', pipelineRoutes);
