@@ -195,8 +195,8 @@ export default function PipelinePanel() {
         </div>
         <div
           ref={terminalRef}
-          className="terminal h-80 overflow-auto"
-          style={{ maxHeight: '320px' }}
+          className="terminal h-[32rem] overflow-auto"
+          style={{ maxHeight: '512px' }}
         >
           {logs.length === 0 ? (
             <div className="text-gray-500">No logs yet. Click "Run Now" to start the pipeline.</div>

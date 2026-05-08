@@ -1,0 +1,284 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+  <defs>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.8" fill="#1e2d42"/>
+    </pattern>
+    <marker id="ah" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6366f1"/>
+    </marker>
+    <marker id="ahp" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#9333ea"/>
+    </marker>
+    <marker id="ahg" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#059669"/>
+    </marker>
+    <marker id="ahs" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0284c7"/>
+    </marker>
+    <marker id="ahpk" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#db2777"/>
+    </marker>
+    <marker id="ahb" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="860" fill="#0d1117"/>
+  <rect width="1400" height="860" fill="url(#dots)"/>
+
+  <!-- ===== HEADER ===== -->
+  <rect x="0" y="0" width="1400" height="88" fill="#0d1117"/>
+  <rect x="0" y="88" width="1400" height="1" fill="#21262d"/>
+
+  <!-- Logo bars -->
+  <rect x="30" y="20" width="6" height="48" rx="3" fill="#3b82f6"/>
+  <rect x="42" y="28" width="6" height="40" rx="3" fill="#6366f1"/>
+  <rect x="54" y="36" width="6" height="32" rx="3" fill="#8b5cf6"/>
+
+  <text x="74" y="52" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700" letter-spacing="-0.5">The Daily Brief</text>
+  <text x="74" y="72" fill="#3d444d" font-family="ui-monospace, 'Cascadia Code', 'SF Mono', monospace" font-size="11" letter-spacing="4">PIPELINE ARCHITECTURE</text>
+
+  <text x="1370" y="48" text-anchor="end" fill="#3d444d" font-family="ui-monospace, monospace" font-size="11">fetch  ›  rank  ›  write  ›  format  ›  publish</text>
+  <text x="1370" y="70" text-anchor="end" fill="#21262d" font-family="ui-monospace, monospace" font-size="10">Node.js  ·  Express  ·  Minimax AI  ·  React 18</text>
+
+  <!-- ===== COLUMN LABELS ===== -->
+  <text x="108" y="112" text-anchor="middle" fill="#3d444d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="3">SOURCES</text>
+  <text x="330" y="112" text-anchor="middle" fill="#3d444d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="3">1 · FETCH</text>
+  <text x="550" y="112" text-anchor="middle" fill="#3d444d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="3">2 · AGGREGATE</text>
+  <text x="770" y="112" text-anchor="middle" fill="#3d444d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="3">3 · WRITE</text>
+  <text x="990" y="112" text-anchor="middle" fill="#3d444d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="3">4 · FORMAT</text>
+  <text x="1210" y="112" text-anchor="middle" fill="#3d444d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="3">5 · PUBLISH</text>
+
+  <!-- ===== NEWS SOURCES ===== -->
+
+  <!-- NewsAPI -->
+  <rect x="30" y="122" width="155" height="68" rx="7" fill="#0d1f33" stroke="#1d4ed8" stroke-width="1.5"/>
+  <rect x="30" y="122" width="155" height="3" rx="1.5" fill="#3b82f6"/>
+  <text x="108" y="146" text-anchor="middle" fill="#60a5fa" font-family="ui-monospace, monospace" font-size="9" letter-spacing="2">NEWSAPI.ORG</text>
+  <text x="108" y="165" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">NewsAPI</text>
+  <text x="108" y="181" text-anchor="middle" fill="#4d5562" font-family="-apple-system, sans-serif" font-size="10">Breaking headlines</text>
+
+  <!-- Finnhub -->
+  <rect x="30" y="205" width="155" height="68" rx="7" fill="#0d1f33" stroke="#1d4ed8" stroke-width="1.5"/>
+  <rect x="30" y="205" width="155" height="3" rx="1.5" fill="#3b82f6"/>
+  <text x="108" y="229" text-anchor="middle" fill="#60a5fa" font-family="ui-monospace, monospace" font-size="9" letter-spacing="2">FINNHUB.IO</text>
+  <text x="108" y="248" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Finnhub</text>
+  <text x="108" y="264" text-anchor="middle" fill="#4d5562" font-family="-apple-system, sans-serif" font-size="10">Market &amp; stock news</text>
+
+  <!-- Alpha Vantage -->
+  <rect x="30" y="288" width="155" height="68" rx="7" fill="#0d1f33" stroke="#1d4ed8" stroke-width="1.5"/>
+  <rect x="30" y="288" width="155" height="3" rx="1.5" fill="#3b82f6"/>
+  <text x="108" y="312" text-anchor="middle" fill="#60a5fa" font-family="ui-monospace, monospace" font-size="9" letter-spacing="2">ALPHAVANTAGE</text>
+  <text x="108" y="331" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Alpha Vantage</text>
+  <text x="108" y="347" text-anchor="middle" fill="#4d5562" font-family="-apple-system, sans-serif" font-size="10">Financial data</text>
+
+  <!-- Source → Fetch arrows -->
+  <path d="M 185 156 Q 215 156 232 228" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ahb)"/>
+  <path d="M 185 239 L 234 239" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ahb)"/>
+  <path d="M 185 322 Q 215 322 232 250" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ahb)"/>
+
+  <!-- ===== PIPELINE STAGE BOXES (y: 122–332, h: 210) ===== -->
+
+  <!-- STAGE 1: FETCH -->
+  <rect x="240" y="122" width="180" height="210" rx="10" fill="#0b0d1f" stroke="#4f46e5" stroke-width="1.5"/>
+  <rect x="240" y="122" width="180" height="4" rx="2" fill="#4f46e5"/>
+  <rect x="258" y="138" width="22" height="22" rx="5" fill="#312e81"/>
+  <text x="269" y="153" text-anchor="middle" fill="#a5b4fc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">1</text>
+  <text x="330" y="152" text-anchor="middle" fill="#818cf8" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1">fetcher.js</text>
+  <text x="330" y="176" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">Fetch</text>
+  <rect x="258" y="192" width="144" height="30" rx="6" fill="#1a1f3c"/>
+  <text x="330" y="212" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Parallel HTTP fetch</text>
+  <rect x="258" y="230" width="144" height="30" rx="6" fill="#1a1f3c"/>
+  <text x="330" y="250" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">URL deduplication</text>
+  <rect x="258" y="268" width="144" height="30" rx="6" fill="#312e81"/>
+  <text x="330" y="288" text-anchor="middle" fill="#c7d2fe" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">~39 headlines</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="420" y1="227" x2="454" y2="227" stroke="#4f46e5" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- STAGE 2: AGGREGATE -->
+  <rect x="460" y="122" width="180" height="210" rx="10" fill="#0b0d1f" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="460" y="122" width="180" height="4" rx="2" fill="#7c3aed"/>
+  <rect x="478" y="138" width="22" height="22" rx="5" fill="#4c1d95"/>
+  <text x="489" y="153" text-anchor="middle" fill="#c4b5fd" font-family="ui-monospace, monospace" font-size="11" font-weight="700">2</text>
+  <text x="550" y="152" text-anchor="middle" fill="#a78bfa" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1">llm.js</text>
+  <text x="550" y="176" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">Aggregate</text>
+  <rect x="478" y="192" width="144" height="30" rx="6" fill="#1e1635"/>
+  <text x="550" y="212" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">LLM deduplication</text>
+  <rect x="478" y="230" width="144" height="30" rx="6" fill="#1e1635"/>
+  <text x="550" y="250" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Significance scoring</text>
+  <rect x="478" y="268" width="144" height="30" rx="6" fill="#4c1d95"/>
+  <text x="550" y="288" text-anchor="middle" fill="#ddd6fe" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">8 ranked stories</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="640" y1="227" x2="674" y2="227" stroke="#7c3aed" stroke-width="2" marker-end="url(#ahp)"/>
+
+  <!-- STAGE 3: WRITE -->
+  <rect x="680" y="122" width="180" height="210" rx="10" fill="#0b0d1f" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="680" y="122" width="180" height="4" rx="2" fill="#7c3aed"/>
+  <rect x="698" y="138" width="22" height="22" rx="5" fill="#4c1d95"/>
+  <text x="709" y="153" text-anchor="middle" fill="#c4b5fd" font-family="ui-monospace, monospace" font-size="11" font-weight="700">3</text>
+  <text x="770" y="152" text-anchor="middle" fill="#a78bfa" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1">llm.js</text>
+  <text x="770" y="176" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">Write</text>
+  <rect x="698" y="192" width="144" height="30" rx="6" fill="#1e1635"/>
+  <text x="770" y="212" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Article generation</text>
+  <rect x="698" y="230" width="144" height="30" rx="6" fill="#1e1635"/>
+  <text x="770" y="250" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Structured sections</text>
+  <rect x="698" y="268" width="144" height="30" rx="6" fill="#4c1d95"/>
+  <text x="770" y="288" text-anchor="middle" fill="#ddd6fe" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">CMS block array</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="860" y1="227" x2="894" y2="227" stroke="#4f46e5" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- STAGE 4: FORMAT -->
+  <rect x="900" y="122" width="180" height="210" rx="10" fill="#0b0d1f" stroke="#4f46e5" stroke-width="1.5"/>
+  <rect x="900" y="122" width="180" height="4" rx="2" fill="#4f46e5"/>
+  <rect x="918" y="138" width="22" height="22" rx="5" fill="#312e81"/>
+  <text x="929" y="153" text-anchor="middle" fill="#a5b4fc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">4</text>
+  <text x="990" y="152" text-anchor="middle" fill="#818cf8" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1">formatter.js</text>
+  <text x="990" y="176" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">Format</text>
+  <rect x="918" y="192" width="144" height="30" rx="6" fill="#1a1f3c"/>
+  <text x="990" y="212" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">MD → block array</text>
+  <rect x="918" y="230" width="144" height="30" rx="6" fill="#1a1f3c"/>
+  <text x="990" y="250" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Fetch hero image</text>
+  <rect x="918" y="268" width="144" height="30" rx="6" fill="#312e81"/>
+  <text x="990" y="288" text-anchor="middle" fill="#c7d2fe" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">Structured JSON</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="1080" y1="227" x2="1114" y2="227" stroke="#4f46e5" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- STAGE 5: PUBLISH -->
+  <rect x="1120" y="122" width="180" height="210" rx="10" fill="#0b0d1f" stroke="#059669" stroke-width="1.5"/>
+  <rect x="1120" y="122" width="180" height="4" rx="2" fill="#059669"/>
+  <rect x="1138" y="138" width="22" height="22" rx="5" fill="#064e3b"/>
+  <text x="1149" y="153" text-anchor="middle" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="11" font-weight="700">5</text>
+  <text x="1210" y="152" text-anchor="middle" fill="#34d399" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1">index.js</text>
+  <text x="1210" y="176" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">Publish</text>
+  <rect x="1138" y="192" width="144" height="30" rx="6" fill="#052e1c"/>
+  <text x="1210" y="212" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">articles/*.json</text>
+  <rect x="1138" y="230" width="144" height="30" rx="6" fill="#052e1c"/>
+  <text x="1210" y="250" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">published/*.md</text>
+  <rect x="1138" y="268" width="144" height="30" rx="6" fill="#064e3b"/>
+  <text x="1210" y="288" text-anchor="middle" fill="#a7f3d0" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">REST API ready</text>
+
+  <!-- ===== EXTERNAL AI + IMAGE SERVICES ===== -->
+
+  <!-- Minimax box — spans under Aggregate + Write -->
+  <rect x="460" y="352" width="400" height="88" rx="10" fill="#160d2b" stroke="#7c3aed" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="660" y="378" text-anchor="middle" fill="#6b21a8" font-family="ui-monospace, monospace" font-size="9" letter-spacing="4">AI ENGINE</text>
+  <text x="660" y="402" text-anchor="middle" fill="#ede9fe" font-family="-apple-system, sans-serif" font-size="15" font-weight="700">Minimax  ·  MiniMax-M2.7</text>
+  <text x="660" y="424" text-anchor="middle" fill="#4b5563" font-family="-apple-system, sans-serif" font-size="11">OpenAI-compatible  ·  Aggregation + article writing</text>
+
+  <!-- Minimax upward connectors -->
+  <line x1="550" y1="352" x2="550" y2="332" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ahp)"/>
+  <line x1="770" y1="352" x2="770" y2="332" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ahp)"/>
+
+  <!-- Pexels box — spans under Format + Publish -->
+  <rect x="900" y="352" width="400" height="88" rx="10" fill="#1a0818" stroke="#db2777" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="1100" y="378" text-anchor="middle" fill="#9d174d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="4">HERO IMAGES</text>
+  <text x="1100" y="402" text-anchor="middle" fill="#fce7f3" font-family="-apple-system, sans-serif" font-size="15" font-weight="700">Pexels  ·  Unsplash</text>
+  <text x="1100" y="424" text-anchor="middle" fill="#4b5563" font-family="-apple-system, sans-serif" font-size="11">Per-category query  ·  Unsplash fallback</text>
+
+  <!-- Pexels upward connector -->
+  <line x1="990" y1="352" x2="990" y2="332" stroke="#db2777" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ahpk)"/>
+
+  <!-- ===== BACKEND ===== -->
+
+  <!-- Publish → Backend path -->
+  <path d="M 1210 332 L 1210 466 Q 1210 482 1194 482 L 1130 482" fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ahg)"/>
+
+  <text x="700" y="464" text-anchor="middle" fill="#3d444d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="3">BACKEND  ·  PORT 3000</text>
+
+  <!-- Backend box -->
+  <rect x="240" y="474" width="880" height="128" rx="10" fill="#020c1a" stroke="#0284c7" stroke-width="1.5"/>
+  <rect x="240" y="474" width="880" height="4" rx="2" fill="#0284c7"/>
+  <text x="700" y="504" text-anchor="middle" fill="#e0f2fe" font-family="-apple-system, sans-serif" font-size="15" font-weight="700">Express.js  ·  server.js</text>
+
+  <!-- REST API sub-box -->
+  <rect x="258" y="516" width="185" height="68" rx="7" fill="#0c1e30"/>
+  <text x="350" y="539" text-anchor="middle" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="9" letter-spacing="2">REST API</text>
+  <text x="350" y="558" text-anchor="middle" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Article CRUD</text>
+  <text x="350" y="574" text-anchor="middle" fill="#374151" font-family="-apple-system, sans-serif" font-size="10">GET · POST · PUT · DELETE</text>
+
+  <!-- WebSocket sub-box -->
+  <rect x="461" y="516" width="185" height="68" rx="7" fill="#0c1e30"/>
+  <text x="553" y="539" text-anchor="middle" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="9" letter-spacing="2">WEBSOCKET</text>
+  <text x="553" y="558" text-anchor="middle" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Pipeline Logs</text>
+  <text x="553" y="574" text-anchor="middle" fill="#374151" font-family="-apple-system, sans-serif" font-size="10">/ws/pipeline-log</text>
+
+  <!-- Pipeline Trigger sub-box -->
+  <rect x="664" y="516" width="185" height="68" rx="7" fill="#0c1e30"/>
+  <text x="756" y="539" text-anchor="middle" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="9" letter-spacing="2">PIPELINE</text>
+  <text x="756" y="558" text-anchor="middle" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Run Trigger</text>
+  <text x="756" y="574" text-anchor="middle" fill="#374151" font-family="-apple-system, sans-serif" font-size="10">POST /api/pipeline/run</text>
+
+  <!-- Chat Proxy sub-box -->
+  <rect x="867" y="516" width="235" height="68" rx="7" fill="#0c1e30"/>
+  <text x="984" y="539" text-anchor="middle" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="9" letter-spacing="2">AI CHAT PROXY</text>
+  <text x="984" y="558" text-anchor="middle" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Streaming Chat</text>
+  <text x="984" y="574" text-anchor="middle" fill="#374151" font-family="-apple-system, sans-serif" font-size="10">POST /api/chat → Minimax</text>
+
+  <!-- ===== FRONTEND ===== -->
+
+  <text x="700" y="624" text-anchor="middle" fill="#3d444d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="3">FRONTEND  ·  PORT 5175  ·  REACT 18 + VITE</text>
+
+  <!-- Backend → Reader arrow -->
+  <line x1="432" y1="602" x2="432" y2="632" stroke="#0284c7" stroke-width="1.5" marker-end="url(#ahs)"/>
+  <!-- Backend → Admin arrow -->
+  <line x1="887" y1="602" x2="887" y2="632" stroke="#0284c7" stroke-width="1.5" marker-end="url(#ahs)"/>
+  <!-- WebSocket → Admin dashed -->
+  <path d="M 553 602 Q 553 616 600 616 Q 800 616 860 632" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ahs)"/>
+
+  <!-- Reader App box -->
+  <rect x="240" y="632" width="385" height="128" rx="10" fill="#0f0900" stroke="#d97706" stroke-width="1.5"/>
+  <rect x="240" y="632" width="385" height="4" rx="2" fill="#d97706"/>
+  <text x="432" y="657" text-anchor="middle" fill="#fbbf24" font-family="ui-monospace, monospace" font-size="9" letter-spacing="3">READER APP  ·  /reader</text>
+  <text x="432" y="680" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system, sans-serif" font-size="16" font-weight="700">Public Feed</text>
+  <rect x="258" y="692" width="160" height="28" rx="6" fill="#1c1200"/>
+  <text x="338" y="711" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">NewsFeed + ArticleView</text>
+  <rect x="430" y="692" width="177" height="28" rx="6" fill="#1c1200"/>
+  <text x="518" y="711" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Dark mode  ·  Categories</text>
+  <text x="432" y="746" text-anchor="middle" fill="#44330a" font-family="-apple-system, sans-serif" font-size="11">Playfair Display + Lora  ·  Editorial typography</text>
+
+  <!-- Admin Studio box -->
+  <rect x="655" y="632" width="465" height="128" rx="10" fill="#0f0900" stroke="#d97706" stroke-width="1.5"/>
+  <rect x="655" y="632" width="465" height="4" rx="2" fill="#d97706"/>
+  <text x="887" y="657" text-anchor="middle" fill="#fbbf24" font-family="ui-monospace, monospace" font-size="9" letter-spacing="3">ADMIN STUDIO  ·  /admin</text>
+  <text x="887" y="680" text-anchor="middle" fill="#f0f6fc" font-family="-apple-system, sans-serif" font-size="16" font-weight="700">Admin Studio</text>
+  <rect x="673" y="692" width="95" height="28" rx="6" fill="#1c1200"/>
+  <text x="720" y="711" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Pipeline</text>
+  <rect x="778" y="692" width="95" height="28" rx="6" fill="#1c1200"/>
+  <text x="825" y="711" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Articles</text>
+  <rect x="883" y="692" width="110" height="28" rx="6" fill="#1c1200"/>
+  <text x="938" y="711" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">CMS Editor</text>
+  <rect x="1003" y="692" width="99" height="28" rx="6" fill="#1c1200"/>
+  <text x="1052" y="711" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">AI Chat</text>
+  <text x="887" y="746" text-anchor="middle" fill="#44330a" font-family="-apple-system, sans-serif" font-size="11">WebSocket live logs  ·  Pipeline trigger  ·  Streaming AI chat</text>
+
+  <!-- ===== FOOTER / LEGEND ===== -->
+  <rect x="0" y="790" width="1400" height="70" fill="#0d1117"/>
+  <rect x="0" y="790" width="1400" height="1" fill="#21262d"/>
+
+  <text x="700" y="810" text-anchor="middle" fill="#3d444d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="3">LEGEND</text>
+
+  <line x1="60" y1="840" x2="100" y2="840" stroke="#6366f1" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="108" y="844" fill="#6b7280" font-family="-apple-system, sans-serif" font-size="11">Pipeline data flow</text>
+
+  <line x1="270" y1="840" x2="310" y2="840" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ahp)"/>
+  <text x="318" y="844" fill="#6b7280" font-family="-apple-system, sans-serif" font-size="11">AI API call</text>
+
+  <line x1="440" y1="840" x2="480" y2="840" stroke="#db2777" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ahpk)"/>
+  <text x="488" y="844" fill="#6b7280" font-family="-apple-system, sans-serif" font-size="11">Image fetch</text>
+
+  <line x1="620" y1="840" x2="660" y2="840" stroke="#0284c7" stroke-width="1.5" marker-end="url(#ahs)"/>
+  <text x="668" y="844" fill="#6b7280" font-family="-apple-system, sans-serif" font-size="11">HTTP request</text>
+
+  <line x1="800" y1="840" x2="840" y2="840" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ahs)"/>
+  <text x="848" y="844" fill="#6b7280" font-family="-apple-system, sans-serif" font-size="11">WebSocket</text>
+
+  <line x1="980" y1="840" x2="1020" y2="840" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ahg)"/>
+  <text x="1028" y="844" fill="#6b7280" font-family="-apple-system, sans-serif" font-size="11">Storage write</text>
+
+  <text x="1370" y="844" text-anchor="end" fill="#21262d" font-family="ui-monospace, monospace" font-size="10">The Daily Brief  ·  AI-Powered Financial News</text>
+</svg>

@@ -4,7 +4,7 @@ An AI-powered financial news aggregator that fetches headlines from multiple sou
 
 The pipeline runs on demand or on a schedule. Articles are stored as JSON and served through a React reader app with light and dark modes. An Admin Studio provides a pipeline runner, article manager, CMS editor, and chat interface.
 
-![Architecture](img/architecture.png)
+![Architecture](img/architecture.svg)
 
 ---
 
