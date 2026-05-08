@@ -2,37 +2,36 @@
 
 An automated financial news aggregator that fetches headlines, deduplicates and ranks them with an LLM, then generates a structured market intelligence article — complete with hero images and stock picks for retail investors.
 
-<img width="1271" height="886" alt="The Daily Brief — News Feed" src="https://github.com/user-attachments/assets/7ed293b4-64d8-4bf9-8c3f-1c73e1c1462b" />
-
 ---
 
 ## Screenshots
 
-### Reader Feed
+### News feed — featured article and sidebar
+<img alt="News feed" src="https://github.com/user-attachments/assets/b9535d85-93c2-4d64-9a28-2871561726b6" />
 
-<img width="1506" height="1090" alt="Feed — featured article and sidebar" src="https://github.com/user-attachments/assets/31bd878d-73f8-4436-a431-4ae2921b3c9b" />
+### Article view — light mode
+<img alt="Article view light mode" src="https://github.com/user-attachments/assets/4e81da22-b747-4c26-9180-a41907db13b5" />
 
-<img width="1455" height="1102" alt="Feed — more stories grid" src="https://github.com/user-attachments/assets/342a70f0-ac6d-4f31-98ff-3ab6a551c25a" />
+### Article view — dark mode
+<img alt="Article view dark mode" src="https://github.com/user-attachments/assets/f2fdf2a7-2730-44db-8c1d-a6538e12d4c5" />
 
-### Article View
+### Article body — What's Happening and Market Breakdown
+<img alt="What's Happening and Market Breakdown" src="https://github.com/user-attachments/assets/31bd878d-73f8-4436-a431-4ae2921b3c9b" />
 
-<img width="1497" height="1084" alt="Article — hero and title" src="https://github.com/user-attachments/assets/f2fdf2a7-2730-44db-8c1d-a6538e12d4c5" />
+### Article body — Market Breakdown sub-headings
+<img alt="Market Breakdown sub-headings" src="https://github.com/user-attachments/assets/12343eee-c5ea-4a3e-9f42-b7da9f6abab1" />
 
-<img width="1491" height="1090" alt="Article — What's Happening section" src="https://github.com/user-attachments/assets/61b4f2a1-7591-4656-a788-3e35634a8ecd" />
+### Article body — Opportunities, Risks and The Bigger Picture
+<img alt="Opportunities and Risks" src="https://github.com/user-attachments/assets/3d192d7b-efe6-4c06-82c3-baa2aa194bee" />
 
-<img width="1360" height="1075" alt="Article — Market Breakdown with sub-headings" src="https://github.com/user-attachments/assets/6e2aebbc-4c95-49c8-836b-c30aaab02e90" />
+### Admin Studio — Articles list
+<img alt="Admin articles list" src="https://github.com/user-attachments/assets/7ed293b4-64d8-4bf9-8c3f-1c73e1c1462b" />
 
-<img width="1459" height="1074" alt="Article — Opportunities and stock picks" src="https://github.com/user-attachments/assets/3d192d7b-efe6-4c06-82c3-baa2aa194bee" />
+### Admin Studio — CMS Editor
+<img alt="Admin CMS editor" src="https://github.com/user-attachments/assets/342a70f0-ac6d-4f31-98ff-3ab6a551c25a" />
 
-<img width="1440" height="1041" alt="Article — Risks and The Bigger Picture" src="https://github.com/user-attachments/assets/12343eee-c5ea-4a3e-9f42-b7da9f6abab1" />
-
-<img width="1257" height="867" alt="Article — full page view" src="https://github.com/user-attachments/assets/4e81da22-b747-4c26-9180-a41907db13b5" />
-
-<img width="1454" height="1050" alt="Article — bottom with back to feed" src="https://github.com/user-attachments/assets/b9535d85-93c2-4d64-9a28-2871561726b6" />
-
-### Admin Studio
-
-<img width="1280" height="900" alt="Admin Studio — Pipeline runner" src="docs/screenshots/admin.png" />
+### Admin Studio — Pipeline runner
+<img alt="Admin pipeline runner" src="docs/screenshots/admin.png" />
 
 ---
 
