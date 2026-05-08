@@ -9,6 +9,12 @@
   "publishedAt": "2026-05-04T04:19:19.619Z",
   "blocks": [
     {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80&auto=format&fit=crop",
+      "alt": "Markets financial news",
+      "caption": ""
+    },
+    {
       "type": "h2",
       "content": "Lead"
     },
@@ -64,5 +70,6 @@
       "type": "text",
       "content": "OPEC+ holds its next meeting amid the Hormuz Strait crisis, with traders watching for signals on whether the cartel will adjust its output strategy in response to the disruption."
     }
-  ]
+  ],
+  "heroImage": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80&auto=format&fit=crop"
 }

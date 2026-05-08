@@ -141,18 +141,29 @@ export default function NewsFeed() {
             <Link
               key={article.id}
               to={`/reader/article/${article.id}`}
-              className="p-4 flex flex-col gap-2 hover:bg-gray-50 dark:hover:bg-dark-card/60 transition-colors group"
+              className="flex gap-3 p-4 hover:bg-gray-50 dark:hover:bg-dark-card/60 transition-colors group"
             >
-              <div className={`category-badge ${getCat(article.category).color}`}>
-                <span className={`w-1.5 h-1.5 rounded-full ${getCat(article.category).bar}`} />
-                {article.category}
+              {article.heroImage && (
+                <div className="shrink-0 w-20 h-16 overflow-hidden">
+                  <img
+                    src={article.heroImage}
+                    alt={article.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                  />
+                </div>
+              )}
+              <div className="flex flex-col gap-1 min-w-0">
+                <div className={`category-badge ${getCat(article.category).color}`}>
+                  <span className={`w-1.5 h-1.5 rounded-full ${getCat(article.category).bar}`} />
+                  {article.category}
+                </div>
+                <h3 className="serif text-sm font-semibold text-headline dark:text-dark-headline leading-snug group-hover:text-accent dark:group-hover:text-dark-accent transition-colors line-clamp-3">
+                  {article.title}
+                </h3>
+                <span className="text-xs text-muted dark:text-dark-muted mt-auto">
+                  {formatDate(article.publishedAt || article.updatedAt)}
+                </span>
               </div>
-              <h3 className="serif text-base font-semibold text-headline dark:text-dark-headline leading-snug group-hover:text-accent dark:group-hover:text-dark-accent transition-colors line-clamp-3">
-                {article.title}
-              </h3>
-              <span className="text-xs text-muted dark:text-dark-muted mt-auto">
-                {formatDate(article.publishedAt || article.updatedAt)}
-              </span>
             </Link>
           ))}
           {sidebar.length === 0 && (
@@ -178,21 +189,33 @@ export default function NewsFeed() {
               <Link
                 key={article.id}
                 to={`/reader/article/${article.id}`}
-                className="border-b border-r border-border dark:border-dark-border p-5 flex flex-col gap-2 hover:bg-gray-50 dark:hover:bg-dark-card/60 transition-colors group"
+                className="border-b border-r border-border dark:border-dark-border flex flex-col hover:bg-gray-50 dark:hover:bg-dark-card/60 transition-colors group"
               >
-                <div className={`category-badge ${getCat(article.category).color}`}>
-                  <span className={`w-1.5 h-1.5 rounded-full ${getCat(article.category).bar}`} />
-                  {article.category}
+                {article.heroImage && (
+                  <div className="overflow-hidden">
+                    <img
+                      src={article.heroImage}
+                      alt={article.title}
+                      className="w-full object-cover group-hover:scale-[1.02] transition-transform duration-200"
+                      style={{ height: '140px' }}
+                    />
+                  </div>
+                )}
+                <div className="p-5 flex flex-col gap-2 flex-1">
+                  <div className={`category-badge ${getCat(article.category).color}`}>
+                    <span className={`w-1.5 h-1.5 rounded-full ${getCat(article.category).bar}`} />
+                    {article.category}
+                  </div>
+                  <h3 className="serif text-base font-semibold text-headline dark:text-dark-headline leading-snug group-hover:text-accent dark:group-hover:text-dark-accent transition-colors line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-muted dark:text-dark-muted line-clamp-2 leading-relaxed">
+                    {getExcerpt(article.blocks)}
+                  </p>
+                  <span className="text-xs text-muted dark:text-dark-muted mt-auto pt-1">
+                    {formatDate(article.publishedAt || article.updatedAt)}
+                  </span>
                 </div>
-                <h3 className="serif text-base font-semibold text-headline dark:text-dark-headline leading-snug group-hover:text-accent dark:group-hover:text-dark-accent transition-colors line-clamp-2">
-                  {article.title}
-                </h3>
-                <p className="text-sm text-muted dark:text-dark-muted line-clamp-2 leading-relaxed">
-                  {getExcerpt(article.blocks)}
-                </p>
-                <span className="text-xs text-muted dark:text-dark-muted mt-auto pt-1">
-                  {formatDate(article.publishedAt || article.updatedAt)}
-                </span>
               </Link>
             ))}
           </div>

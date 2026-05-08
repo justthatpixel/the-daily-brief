@@ -9,6 +9,12 @@
   "publishedAt": "2026-05-03T18:38:24.317Z",
   "blocks": [
     {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80&auto=format&fit=crop",
+      "alt": "Markets financial news",
+      "caption": ""
+    },
+    {
       "type": "h2",
       "content": "Lead"
     },
@@ -64,5 +70,6 @@
       "type": "text",
       "content": "Traders will monitor Iranian port activity and any escalation in U.S. military positioning as oil markets brace for potential supply disruptions."
     }
-  ]
+  ],
+  "heroImage": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80&auto=format&fit=crop"
 }

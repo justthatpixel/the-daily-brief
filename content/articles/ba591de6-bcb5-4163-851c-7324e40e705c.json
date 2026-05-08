@@ -9,6 +9,12 @@
   "publishedAt": "2026-05-03T17:31:25.187Z",
   "blocks": [
     {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80&auto=format&fit=crop",
+      "alt": "Markets financial news",
+      "caption": ""
+    },
+    {
       "type": "text",
       "content": "<think>Let me analyze the ranked stories and create a clean financial briefing following all the rules:"
     },
@@ -92,5 +98,6 @@
       "type": "text",
       "content": "I'll focus on concise, impactful reporting that captures the essential market and economic shifts. </think> DATE: Monday, October 27, 2025 HEADLINE Spirit Airlines has shut down after a last-minute rescue deal collapsed, leaving thousands of passengers stranded and marking the largest airline bankruptcy in U.S. history. LEAD Spirit Airlines confirmed early Saturday that it had no choice but to wind down operations immediately after a proposed financial lifeline failed to materialize. The budget carrier, once a staple of low-cost travel, struggled for months under mounting debt and unsuccessful merger talks with JetBlue before ultimately failing to find a buyer. For investors, the collapse signals deeper trouble in the ultra-low-cost carrier space and raises questions about potential consolidation in"
     }
-  ]
+  ],
+  "heroImage": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80&auto=format&fit=crop"
 }

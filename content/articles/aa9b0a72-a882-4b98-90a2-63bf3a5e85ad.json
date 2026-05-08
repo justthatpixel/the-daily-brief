@@ -9,6 +9,12 @@
   "publishedAt": "2026-05-03T18:07:03.955Z",
   "blocks": [
     {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&auto=format&fit=crop",
+      "alt": "Markets financial news",
+      "caption": ""
+    },
+    {
       "type": "text",
       "content": "Escalating military tensions between the United States and Iran have gripped markets, sending crude prices swinging as investors weigh the risk of a prolonged blockade against ceasefire talks."
     },
@@ -72,5 +78,6 @@
       "type": "text",
       "content": "Any escalation or de-escalation in the US-Iran standoff will dominate early trading, with crude and defense stocks leading sentiment shifts."
     }
-  ]
+  ],
+  "heroImage": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&auto=format&fit=crop"
 }

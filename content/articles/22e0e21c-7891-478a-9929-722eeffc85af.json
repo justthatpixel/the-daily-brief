@@ -9,6 +9,12 @@
   "publishedAt": "2026-05-03T18:02:29.740Z",
   "blocks": [
     {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80&auto=format&fit=crop",
+      "alt": "Markets financial news",
+      "caption": ""
+    },
+    {
       "type": "text",
       "content": "The collapse of Spirit Airlines after a failed White House rescue deal has sent shockwaves through airline stocks, while escalating U.S.-Iran tensions and a historic Federal Reserve split are compounding investor anxiety heading into a pivotal week."
     },
@@ -68,5 +74,6 @@
       "type": "text",
       "content": "Traders will scrutinize the Bank of England's rate decision and accompanying commentary for signals on global monetary policy divergence."
     }
-  ]
+  ],
+  "heroImage": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80&auto=format&fit=crop"
 }

@@ -9,6 +9,12 @@
   "publishedAt": "2026-05-03T17:49:59.545Z",
   "blocks": [
     {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80&auto=format&fit=crop",
+      "alt": "Markets financial news",
+      "caption": ""
+    },
+    {
       "type": "h1",
       "content": "Spirit Airlines Grounds Final Flights as Last-Ditch Deal Collapses, Marking Largest Airline Failure in U.S. History"
     },
@@ -72,5 +78,6 @@
       "type": "text",
       "content": "Markets will focus on October jobs data and any Fed official commentary following this weekend's rate outlook update, with traders pricing in a 75% chance of a December rate cut."
     }
-  ]
+  ],
+  "heroImage": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80&auto=format&fit=crop"
 }

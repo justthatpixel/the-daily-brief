@@ -9,6 +9,12 @@
   "publishedAt": "2026-05-03T18:08:57.433Z",
   "blocks": [
     {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80&auto=format&fit=crop",
+      "alt": "Markets financial news",
+      "caption": ""
+    },
+    {
       "type": "text",
       "content": "A failed White House-backed rescue deal forced Spirit Airlines into immediate liquidation Saturday, sending shockwaves through the airline sector while geopolitical risk from President Trump's threats against Iran drove crude prices higher and kept global markets on edge."
     },
@@ -72,5 +78,6 @@
       "type": "text",
       "content": "A week of heavy central bank communications concludes with Bank of England Governor Bailey testifying before Parliament, where he will face questions about the outlook for UK rates and the fiscal implications of the new government's spending plans."
     }
-  ]
+  ],
+  "heroImage": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80&auto=format&fit=crop"
 }

@@ -9,6 +9,12 @@
   "publishedAt": "2026-05-03T17:26:21.497Z",
   "blocks": [
     {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80&auto=format&fit=crop",
+      "alt": "Markets financial news",
+      "caption": ""
+    },
+    {
       "type": "h2",
       "content": "MASTHEAD"
     },
@@ -172,5 +178,6 @@
       "type": "text",
       "content": "Markets face a pivotal session tomorrow as traders assess whether geopolitical risk premiums adequately reflect current tensions. The Federal Reserve's policy dissent warrants close attention, particularly if any officials signal willingness to reconsider the current rate trajectory. Energy markets will remain sensitive to developments regarding Iran, where any escalation could rapidly reverse the recent oil price decline. Corporate earnings continue to dominate individual stock narratives, with investors seeking clarity on how companies are navigating cost pressures and demand uncertainty."
     }
-  ]
+  ],
+  "heroImage": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80&auto=format&fit=crop"
 }

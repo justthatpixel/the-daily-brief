@@ -1,0 +1,95 @@
+{
+  "id": "1fbdf97d-18ac-4b09-a0e0-94f7f35c955c",
+  "title": "Oil Surges as US Strikes Iran, Strait of Hormuz Tensions Flare",
+  "slug": "oil-surges-as-us-strikes-iran-strait-of-hormuz-tensions-flar",
+  "status": "published",
+  "category": "Markets",
+  "heroImage": "https://images.pexels.com/photos/3743622/pexels-photo-3743622.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  "createdAt": "2026-05-08T08:59:28.576Z",
+  "updatedAt": "2026-05-08T08:59:28.576Z",
+  "publishedAt": "2026-05-08T08:59:28.576Z",
+  "blocks": [
+    {
+      "type": "image",
+      "url": "https://images.pexels.com/photos/3743622/pexels-photo-3743622.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "alt": "US military convoy travels on a highway in Al Hasakah, Syria, under blue skies.",
+      "caption": "Photo by Ivan  Hassib on Pexels"
+    },
+    {
+      "type": "h2",
+      "content": "What's Happening"
+    },
+    {
+      "type": "text",
+      "content": "US military strikes on Iranian ports at Qeshm and Bandar Abbas have escalated Middle East tensions, with US Navy destroyers reportedly coming under missile fire. Oil markets are reacting sharply to the prospect of disruption to the Strait of Hormuz, a critical chokepoint carrying roughly 20% of global oil shipments. The IEA head warned energy markets are heading into \"troubled waters\" as Iran warns it won't allow reopening of the strategic waterway under current conditions."
+    },
+    {
+      "type": "h2",
+      "content": "Market Breakdown"
+    },
+    {
+      "type": "text",
+      "content": "Middle East Conflict Drives Energy Surge The US-Iran military exchange marks a significant escalation despite ceasefire negotiations. Brent crude is climbing as markets price in potential supply disruption through the Strait of Hormuz, through which roughly one-fifth of the world's oil flows. The IEA warning about troubled waters signals the global energy system has limited buffer capacity to absorb a prolonged disruption."
+    },
+    {
+      "type": "text",
+      "content": "Cloud Earnings Confirm AI Infrastructure Boom Datadog's 31% surge after blockbuster earnings is rippling across the cloud infrastructure sector, with Snowflake and MongoDB also climbing. The results validate continued enterprise spending on AI-related software infrastructure, suggesting the buildout cycle remains early-stage and robust despite broader tech valuation concerns."
+    },
+    {
+      "type": "text",
+      "content": "CPU Renaissance Extends Beyond AI Arm Holdings beating fiscal Q4 estimates reinforces a broader trend: the return of CPU compute demand beyond GPU-centric AI workloads. Both Intel and AMD reported similar CPU tailwinds, suggesting enterprise refresh cycles and edge computing demand are complementing the GPU story."
+    },
+    {
+      "type": "text",
+      "content": "Gold Bids Higher on Fading Peace Prospects With Iran reviewing a US peace proposal but warning against unrealistic demands, gold is set for a weekly gain as investors hedge against a prolonged conflict scenario. The metal is acting as a classic risk-off barometer as ceasefire hopes dim."
+    },
+    {
+      "type": "h2",
+      "content": "Opportunities"
+    },
+    {
+      "type": "text",
+      "content": "• XOM (ExxonMobil): Direct beneficiary of oil supply disruption fears as Brent crude climbs on Strait of Hormuz tensions."
+    },
+    {
+      "type": "text",
+      "content": "• LMT (Lockheed Martin): Defense contractor positioned to gain as US military operations in the Middle East intensify."
+    },
+    {
+      "type": "text",
+      "content": "• DDOG (Datadog): Cloud monitoring leader's blockbuster earnings signal continued enterprise AI infrastructure spending strength."
+    },
+    {
+      "type": "text",
+      "content": "• DIS (Walt Disney): Streaming profit surge to 150M subscriber target validates the entertainment giant's streaming turnaround."
+    },
+    {
+      "type": "text",
+      "content": "• NEM (Newmont): Gold miner gains as geopolitical uncertainty and fading peace deal prospects drive safe-haven buying."
+    },
+    {
+      "type": "h2",
+      "content": "Risks"
+    },
+    {
+      "type": "text",
+      "content": "• DAL (Delta Air Lines): Airline margins face direct pressure as jet-fuel prices spike on Iran conflict escalation."
+    },
+    {
+      "type": "text",
+      "content": "• Toyota: Faces estimated $4.3 billion hit from Iran war disruptions, including supply chain exposure and broader energy price volatility."
+    },
+    {
+      "type": "text",
+      "content": "• Consumer Discretionary ETFs (XLY): Prolonged Middle East conflict and oil price surge typically crimps consumer spending on non-essential goods."
+    },
+    {
+      "type": "h2",
+      "content": "The Bigger Picture"
+    },
+    {
+      "type": "text",
+      "content": "The collision between US-Iran hostilities and a tech earnings wave creates a bifurcated market. Over the next 2-4 weeks, expect energy and defense sectors to outperform while rate-sensitive growth names face headwinds from oil-driven inflation concerns. Retail investors with diversified portfolios should monitor jet-fuel costs as a leading indicator for airline and travel sector pressure, while maintaining exposure to energy and defense as the geopolitical premium remains elevated."
+    }
+  ]
+}
