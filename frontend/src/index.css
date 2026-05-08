@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-body;
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .dark body {
+    @apply bg-dark-bg text-dark-body;
+  }
+}
+
+@layer components {
+  .serif-title {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-card rounded-xl border border-border shadow-sm;
+  }
+  .dark .card {
+    @apply bg-dark-card border-gray-700;
+  }
+  .btn-primary {
+    @apply px-4 py-2 bg-accent text-white rounded-lg font-medium hover:bg-blue-700 transition-colors;
+  }
+  .dark .btn-primary {
+    @apply bg-dark-accent hover:bg-blue-600;
+  }
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors;
+  }
+  .dark .btn-secondary {
+    @apply bg-gray-800 text-gray-200 hover:bg-gray-700;
+  }
+  .input {
+    @apply w-full px-4 py-2 border border-border rounded-lg bg-white text-headline;
+  }
+  .dark .input {
+    @apply bg-dark-card border-gray-700 text-dark-headline;
+  }
+}
+
+/* TipTap Editor Styles */
+.ProseMirror {
+  @apply outline-none min-h-[300px] p-4;
+}
+.ProseMirror h1 {
+  @apply text-3xl font-bold mb-4 text-headline;
+}
+.ProseMirror h2 {
+  @apply text-2xl font-semibold mb-3 text-headline;
+}
+.ProseMirror h3 {
+  @apply text-xl font-semibold mb-2 text-headline;
+}
+.ProseMirror p {
+  @apply mb-4 leading-relaxed;
+}
+.ProseMirror blockquote {
+  @apply border-l-4 border-accent pl-4 italic text-body;
+}
+.ProseMirror img {
+  @apply max-w-full h-auto rounded-lg my-4;
+}
+.ProseMirror hr {
+  @apply border-t border-border my-6;
+}
+.ProseMirror p.is-editor-empty:first-child::before {
+  @apply text-gray-400 content-[attr(data-placeholder)];
+}
+
+/* Pipeline terminal styles */
+.terminal {
+  @apply bg-gray-900 text-green-400 font-mono text-sm p-4 rounded-lg overflow-auto;
+}
+.dark .terminal {
+  @apply bg-black;
+}
+.terminal .log-info { @apply text-blue-400; }
+.terminal .log-success { @apply text-green-400; }
+.terminal .log-warning { @apply text-yellow-400; }
+.terminal .log-error { @apply text-red-400; }
+
+/* Step indicators */
+.step-indicator {
+  @apply flex items-center gap-2;
+}
+.step-dot {
+  @apply w-3 h-3 rounded-full;
+}
+.step-dot.idle { @apply bg-gray-300; }
+.step-dot.running { @apply bg-amber-500 animate-pulse; }
+.step-dot.done { @apply bg-green-500; }
+.step-dot.error { @apply bg-red-500; }

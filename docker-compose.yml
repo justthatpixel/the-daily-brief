@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./content:/app/content
+      - ./backend:/app/backend
+      - ./frontend:/app/frontend
+      - ./pipeline:/app/pipeline
+    environment:
+      - NODE_ENV=production
+      - NEWSAPI_KEY=${NEWSAPI_KEY}
+      - FINNHUB_KEY=${FINNHUB_KEY}
+      - ALPHA_VANTAGE_KEY=${ALPHA_VANTAGE_KEY}
+      - MINIMAX_API_KEY=${MINIMAX_API_KEY}
+      - MINIMAX_MODEL=${MINIMAX_MODEL:-MiniMax-M2.7}
+      - MINIMAX_BASE_URL=${MINIMAX_BASE_URL:-https://api.minimax.io}
+      - OLLAMA_HOST=http://host.docker.internal:11434
+      - OLLAMA_MODEL=qwen3.5:9b
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    working_dir: /app

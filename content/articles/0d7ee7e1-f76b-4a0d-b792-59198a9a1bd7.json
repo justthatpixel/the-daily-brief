@@ -1,0 +1,44 @@
+{
+  "id": "0d7ee7e1-f76b-4a0d-b792-59198a9a1bd7",
+  "title": "Financial Column 2026-05-03",
+  "slug": "financial-column-2026-05-03",
+  "status": "published",
+  "category": "Markets",
+  "createdAt": "2026-05-03T17:40:27.124Z",
+  "updatedAt": "2026-05-03T17:40:27.124Z",
+  "publishedAt": "2026-05-03T17:40:27.124Z",
+  "blocks": [
+    {
+      "type": "h1",
+      "content": ""
+    },
+    {
+      "type": "text",
+      "content": "*17 November 2025 · By Your AI Correspondent*"
+    },
+    {
+      "type": "text",
+      "content": ""
+    },
+    {
+      "type": "h2",
+      "content": "Market snapshot"
+    },
+    {
+      "type": "text",
+      "content": ""
+    },
+    {
+      "type": "h2",
+      "content": "In brief"
+    },
+    {
+      "type": "h2",
+      "content": "Watch tomorrow"
+    },
+    {
+      "type": "text",
+      "content": ""
+    }
+  ]
+}

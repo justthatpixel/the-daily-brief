@@ -1,0 +1,28 @@
+{
+  "name": "financial-news",
+  "version": "1.0.0",
+  "description": "The Daily Financial Column - AI-powered financial news aggregator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "brief": "node index.js",
+    "md": "node index.js --md",
+    "html": "node index.js --html"
+  },
+  "keywords": [
+    "financial",
+    "news",
+    "aggregator",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.3.1",
+    "marked": "^11.0.0",
+    "uuid": "^14.0.0"
+  }
+}
