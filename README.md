@@ -121,10 +121,14 @@ Or trigger it from the browser once the servers are running.
 <img width="1330" height="1062" alt="Screenshot 2026-05-08 at 12 01 32" src="https://github.com/user-attachments/assets/154a6c07-301c-4dc6-aad2-8b17ecad45b2" />
 
 ### Admin Studio
-![Admin Studio](img/admin.png)
+![Admin Studio](img/admin.png)<img width="1327" height="1067" alt="Screenshot 2026-05-08 at 12 11 16" src="https://github.com/user-attachments/assets/61ff6545-23b2-4f30-a8b0-5168370b85f3" />
+
 
 ### Pipeline Logs
-![Pipeline Logs](img/pipeline.png)
+![Pipeline Logs](img/pipeline.png)<img width="1694" height="1068" alt="Screenshot 2026-05-08 at 12 12 20" src="https://github.com/user-attachments/assets/949d7b2c-0dc3-4abb-ba82-16d8329f41aa" />
+
+### Editor
+<img width="1682" height="1073" alt="Screenshot 2026-05-08 at 12 13 25" src="https://github.com/user-attachments/assets/8f4c5c92-d9fc-41d0-9f67-aa35f4ec556f" />
 
 ---
 
