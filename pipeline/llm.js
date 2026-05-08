@@ -116,9 +116,10 @@ FORMAT (follow exactly, no deviations):
 Write 2-3 sentences as a sharp executive summary of the most significant combined market development today and why it matters for investors.
 
 ## Market Breakdown
-Write 3-5 short analytical sections. Each section:
-- First line: a short descriptive section title (no # or ** formatting)
-- Then 2-3 sentences of sharp, factual analysis
+Write 3-5 short analytical sections. Each section MUST follow this exact structure:
+
+### Section Title Here
+Body paragraph: 2-3 sentences of sharp, factual analysis. The title must be on its own line as a ### heading, never merged into the paragraph text.
 
 Focus on the dominant themes from today's stories (e.g. central banks, Big Tech, energy, geopolitics, earnings).
 
@@ -140,7 +141,7 @@ Format each bullet as:
 Write 2-3 sentences on the macro trend that connects today's stories — what the next 2-4 weeks could look like for retail investors holding a diversified portfolio.
 
 RULES:
-- Use Markdown headings (#, ##) ONLY — no bold (**), no italics (*), no asterisks, no HTML, no em-dashes (—)
+- Use Markdown headings (#, ##, ###) ONLY — no bold (**), no italics (*), no asterisks, no HTML, no em-dashes (—)
 - Every ticker named must be real and listed on a major exchange (NYSE, NASDAQ, LSE, or Euronext)
 - ONLY base content on the provided stories — never hallucinate data, prices, or events
 - The H1 headline must be specific to today's top story
