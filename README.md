@@ -115,7 +115,10 @@ Or trigger it from the browser once the servers are running.
 ## 📸 Screenshots
 
 ### Reader App
-![Reader App](img/reader.png)
+<img width="1316" height="1035" alt="Screenshot 2026-05-08 at 12 01 13" src="https://github.com/user-attachments/assets/b34625b9-eb54-4b8a-b62a-fd23d6ad3f37" />
+
+## Article View
+<img width="1330" height="1062" alt="Screenshot 2026-05-08 at 12 01 32" src="https://github.com/user-attachments/assets/154a6c07-301c-4dc6-aad2-8b17ecad45b2" />
 
 ### Admin Studio
 ![Admin Studio](img/admin.png)
