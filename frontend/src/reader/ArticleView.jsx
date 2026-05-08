@@ -223,7 +223,7 @@ export default function ArticleView() {
           ← Back to feed
         </Link>
         <span className="serif text-sm font-bold text-headline dark:text-dark-headline opacity-40">
-          Capital Brief
+          The Daily Brief
         </span>
       </div>
     </div>

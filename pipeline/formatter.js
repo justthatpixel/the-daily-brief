@@ -3,9 +3,21 @@ const fs = require('fs');
 const path = require('path');
 
 /**
+ * Strip markdown inline markup and em-dashes from a text string.
+ * Handles **bold**, *italic*, and — (em-dash used as separator in bullets).
+ */
+function cleanInline(text) {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, '$1')   // **bold** → plain
+    .replace(/\*(.+?)\*/g, '$1')        // *italic* → plain
+    .replace(/ — /g, ': ')              // TICKER — Company → TICKER: Company
+    .replace(/—/g, '-');                // any remaining em-dash → hyphen
+}
+
+/**
  * Convert markdown string to CMS blocks
  * - Skips H1 (title is stored separately)
- * - Splits bullet points at ':' to style topic separately
+ * - Strips inline markdown formatting and em-dashes
  * - Uses • for bullet points
  */
 function markdownToBlocks(markdown) {
@@ -16,7 +28,7 @@ function markdownToBlocks(markdown) {
   
   const flushParagraph = () => {
     if (currentParagraph.length > 0) {
-      const text = currentParagraph.join(' ').trim();
+      const text = cleanInline(currentParagraph.join(' ').trim());
       if (text) {
         blocks.push({ type: 'text', content: text });
       }
@@ -45,33 +57,33 @@ function markdownToBlocks(markdown) {
     // H2 heading
     if (trimmed.startsWith('## ')) {
       flushParagraph();
-      blocks.push({ type: 'h2', content: trimmed.slice(3) });
+      blocks.push({ type: 'h2', content: cleanInline(trimmed.slice(3)) });
       i++;
       continue;
     }
-    
+
     // H3 heading
     if (trimmed.startsWith('### ')) {
       flushParagraph();
-      blocks.push({ type: 'h3', content: trimmed.slice(4) });
+      blocks.push({ type: 'h3', content: cleanInline(trimmed.slice(4)) });
       i++;
       continue;
     }
-    
+
     // Bullet list item - use • instead of -
     if (trimmed.startsWith('- ') || trimmed.startsWith('• ')) {
       flushParagraph();
-      const content = trimmed.slice(2);
+      const content = cleanInline(trimmed.slice(2));
       blocks.push({ type: 'text', content: `• ${content}` });
       i++;
       continue;
     }
-    
-    // Numbered list item - convert to bullet with number
+
+    // Numbered list item
     if (trimmed.match(/^\d+\.\s/)) {
       flushParagraph();
       const num = trimmed.match(/^(\d+)\.\s/)[1];
-      const content = trimmed.replace(/^\d+\.\s/, '');
+      const content = cleanInline(trimmed.replace(/^\d+\.\s/, ''));
       blocks.push({ type: 'text', content: `${num}. ${content}` });
       i++;
       continue;
@@ -129,7 +141,7 @@ function toTerminal(markdown) {
   const bar = '━'.repeat(w);
   
   console.log('\n' + chalk.dim(bar));
-  console.log(chalk.bold.white('  CAPITAL BRIEF'));
+  console.log(chalk.bold.white('  THE DAILY BRIEF'));
   console.log(chalk.dim(bar));
   
   for (const block of blocks) {

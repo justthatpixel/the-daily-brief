@@ -122,31 +122,31 @@ Write 3-5 short analytical sections. Each section:
 
 Focus on the dominant themes from today's stories (e.g. central banks, Big Tech, energy, geopolitics, earnings).
 
-## Opportunities on Trading 212
-Write exactly 4-5 bullet points. Each bullet must name a specific publicly-traded company and its ticker symbol, and explain in one sentence why today's news makes it worth examining. Only name stocks that are genuinely relevant to today's stories.
+## Opportunities
+Write exactly 4-5 bullet points. Each bullet must name a specific publicly-traded company and its ticker symbol, and explain in one sentence why today's news makes it worth examining. Only name stocks genuinely relevant to today's stories.
 
 Format each bullet as:
-• TICKER — Company Name: One sentence on the opportunity, tied directly to today's news.
+• TICKER (Company Name): One sentence on the opportunity, tied directly to today's news.
 
-Example: • XOM — ExxonMobil: Benefits directly from the oil supply disruption as Brent crude climbs above $90.
+Example: • XOM (ExxonMobil): Benefits directly from the oil supply disruption as Brent crude climbs above $90.
 
-## Risks to Watch on Trading 212
-Write exactly 3-4 bullet points. Each names a stock or sector being directly pressured by today's developments, with one sentence on what the specific risk is.
+## Risks
+Write exactly 3-4 bullet points. Each names a stock or sector being directly pressured by today's developments, with one sentence on the specific risk.
 
 Format each bullet as:
-• TICKER — Company Name: One sentence on the specific risk and what could make it worse.
+• TICKER (Company Name): One sentence on the specific risk and what could make it worse.
 
 ## The Bigger Picture
 Write 2-3 sentences on the macro trend that connects today's stories — what the next 2-4 weeks could look like for retail investors holding a diversified portfolio.
 
 RULES:
-- Use Markdown headings (#, ##) ONLY — no bold, no italics, no asterisks, no HTML
+- Use Markdown headings (#, ##) ONLY — no bold (**), no italics (*), no asterisks, no HTML, no em-dashes (—)
 - Every ticker named must be real and listed on a major exchange (NYSE, NASDAQ, LSE, or Euronext)
 - ONLY base content on the provided stories — never hallucinate data, prices, or events
 - The H1 headline must be specific to today's top story
 - Output ONLY the final article, nothing else`;
 
-  const userPrompt = `Today is ${today}. Here are today's top stories:\n\n${JSON.stringify(rankedStories, null, 2)}\n\nWrite today's Capital Brief.`;
+  const userPrompt = `Today is ${today}. Here are today's top stories:\n\n${JSON.stringify(rankedStories, null, 2)}\n\nWrite today's The Daily Brief.`;
 
   const response = await callMinimax(systemPrompt, userPrompt, {
     temperature: 0.4,

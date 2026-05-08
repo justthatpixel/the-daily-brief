@@ -90,7 +90,7 @@ async function saveToCMS(markdown, rankedStories) {
  * Main orchestrator for the Financial Column pipeline
  */
 async function main() {
-  console.log(chalk.bold.cyan('\n📰 CAPITAL BRIEF — PIPELINE\n'));
+  console.log(chalk.bold.cyan('\n📰 THE DAILY BRIEF — PIPELINE\n'));
   console.log(chalk.gray('  Generating your financial brief...\n'));
 
   try {
