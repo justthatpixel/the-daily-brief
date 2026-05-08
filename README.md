@@ -2,6 +2,16 @@
 
 An automated financial news aggregator that fetches headlines, deduplicates and ranks them with an LLM, then generates a structured market intelligence article — complete with hero images and stock picks for retail investors.
 
+## Screenshots
+
+![News Feed](docs/screenshots/feed.png)
+
+![Article View](docs/screenshots/article-top.png)
+
+![Article Body — Market Breakdown with sub-headings](docs/screenshots/article-body.png)
+
+![Admin Studio](docs/screenshots/admin.png)
+
 ## How It Works
 
 1. **Fetch** — pulls headlines from NewsAPI, Finnhub, and Alpha Vantage
