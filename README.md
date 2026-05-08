@@ -1,14 +1,24 @@
+<img width="1271" height="886" alt="Screenshot 2026-05-08 at 11 32 04" src="https://github.com/user-attachments/assets/7ed293b4-64d8-4bf9-8c3f-1c73e1c1462b" />
 # The Daily Brief
 
 An automated financial news aggregator that fetches headlines, deduplicates and ranks them with an LLM, then generates a structured market intelligence article — complete with hero images and stock picks for retail investors.
 
 ## Screenshots
 
-![News Feed](docs/screenshots/feed.png)
+<img width="1506" height="1090" alt="Screenshot 2026-05-08 at 11 39 47" src="https://github.com/user-attachments/assets/31bd878d-73f8-4436-a431-4ae2921b3c9b" />
 
-![Article View](docs/screenshots/article-top.png)
+<img width="1455" height="1102" alt="Screenshot 2026-05-08 at 11 37 06" src="https://github.com/user-attachments/assets/342a70f0-ac6d-4f31-98ff-3ab6a551c25a" />
+<img width="1497" height="1084" alt="Screenshot 2026-05-08 at 11 36 11" src="https://github.com/user-attachments/assets/f2fdf2a7-2730-44db-8c1d-a6538e12d4c5" />
+<img width="1491" height="1090" alt="Screenshot 2026-05-08 at 11 35 47" src="https://github.com/user-attachments/assets/61b4f2a1-7591-4656-a788-3e35634a8ecd" />
+<img width="1360" height="1075" alt="Screenshot 2026-05-08 at 11 35 34" src="https://github.com/user-attachments/assets/6e2aebbc-4c95-49c8-836b-c30aaab02e90" />
+<img width="1459" height="1074" alt="Screenshot 2026-05-08 at 11 35 08" src="https://github.com/user-attachments/assets/3d192d7b-efe6-4c06-82c3-baa2aa194bee" />
+<img width="1440" height="1041" alt="Screenshot 2026-05-08 at 11 34 46" src="https://github.com/user-attachments/assets/12343eee-c5ea-4a3e-9f42-b7da9f6abab1" />
 
-![Article Body — Market Breakdown with sub-headings](docs/screenshots/article-body.png)
+
+![Article View](doc<img width="1257" height="867" alt="Screenshot 2026-05-08 at 11 32 52" src="https://github.com/user-attachments/assets/4e81da22-b747-4c26-9180-a41907db13b5" />
+
+<img width="1454" height="1050" alt="Screenshot 2026-05-08 at 11 33 59" src="https://github.com/user-attachments/assets/b9535d85-93c2-4d64-9a28-2871561726b6" />
+
 
 ![Admin Studio](docs/screenshots/admin.png)
 
