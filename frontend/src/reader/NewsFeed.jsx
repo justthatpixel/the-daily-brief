@@ -103,8 +103,19 @@ export default function NewsFeed() {
         {/* Featured */}
         <Link
           to={`/reader/article/${featured.id}`}
-          className="md:col-span-2 p-6 md:p-8 flex flex-col justify-between border-b md:border-b-0 md:border-r border-border dark:border-dark-border group hover:bg-gray-50 dark:hover:bg-dark-card/60 transition-colors"
+          className="md:col-span-2 flex flex-col border-b md:border-b-0 md:border-r border-border dark:border-dark-border group hover:bg-gray-50 dark:hover:bg-dark-card/60 transition-colors"
         >
+          {featured.heroImage && (
+            <div className="overflow-hidden">
+              <img
+                src={featured.heroImage}
+                alt={featured.title}
+                className="w-full object-cover group-hover:scale-[1.01] transition-transform duration-300"
+                style={{ height: '220px' }}
+              />
+            </div>
+          )}
+          <div className="p-6 md:p-8 flex flex-col flex-1 justify-between">
           <div>
             <div className={`category-badge ${getCat(featured.category).color} mb-3`}>
               <span className={`w-1.5 h-1.5 rounded-full ${getCat(featured.category).bar}`} />
@@ -120,6 +131,7 @@ export default function NewsFeed() {
           <div className="flex items-center justify-between mt-6 pt-4 border-t border-border dark:border-dark-border text-xs text-muted dark:text-dark-muted">
             <span>By Your AI Correspondent · {formatDate(featured.publishedAt || featured.updatedAt)}</span>
             <span className="font-semibold text-accent dark:text-dark-accent">Read →</span>
+          </div>
           </div>
         </Link>
 

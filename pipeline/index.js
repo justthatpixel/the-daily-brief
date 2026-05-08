@@ -7,6 +7,7 @@ const crypto = require('crypto');
 const { fetchAllNews } = require('./fetcher');
 const { aggregateStories, writeColumn } = require('./llm');
 const { toTerminal, toMarkdownFile, getBlocks } = require('./formatter');
+const { fetchHeroImage } = require('./images');
 
 /**
  * Generate UUID v4
@@ -18,44 +19,70 @@ function generateId() {
 /**
  * Save column to CMS as JSON article
  */
-async function saveToCMS(markdown) {
+async function saveToCMS(markdown, rankedStories) {
   const articlesDir = path.join(__dirname, '../content/articles');
-  
-  // Ensure directory exists
+
   if (!fs.existsSync(articlesDir)) {
     fs.mkdirSync(articlesDir, { recursive: true });
   }
-  
-  // Generate article ID and date
+
   const id = generateId();
   const now = new Date();
   const dateStr = now.toISOString().split('T')[0];
-  
-  // Convert markdown to CMS blocks
-  const blocks = getBlocks(markdown);
-  
-  // Extract title from first H1 in raw markdown
-  const titleMatch = markdown.match(/^#\s+(.+)\n/m);
-  const title = titleMatch ? titleMatch[1] : `Financial Column ${dateStr}`;
-  
-  // Create article object
+
+  // Extract title from first H1 — use top story headline as fallback
+  const titleMatch = markdown.match(/^#\s+(.+)/m);
+  const topStoryHeadline = rankedStories?.[0]?.headline || '';
+  const title = (titleMatch ? titleMatch[1].trim() : topStoryHeadline) || `Market Brief — ${dateStr}`;
+
+  // Derive category from most common category in ranked stories
+  const categoryCounts = {};
+  (rankedStories || []).forEach(s => {
+    const c = s.category || 'Markets';
+    categoryCounts[c] = (categoryCounts[c] || 0) + 1;
+  });
+  const category = Object.entries(categoryCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'Markets';
+
+  // Fetch hero image
+  const topKeywords = rankedStories?.slice(0, 2).map(s => s.headline).join(' ').slice(0, 80) || '';
+  console.log(chalk.gray('    Fetching hero image...'));
+  const heroImage = await fetchHeroImage(category, topKeywords);
+  console.log(chalk.green(`    ✓ Hero image: ${heroImage.source}`));
+
+  // Build blocks — inject image as first block
+  const contentBlocks = getBlocks(markdown);
+  const imageBlock = {
+    type: 'image',
+    url: heroImage.url,
+    alt: heroImage.alt,
+    caption: heroImage.caption,
+  };
+  const blocks = [imageBlock, ...contentBlocks];
+
+  // Slug from title
+  const slug = title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .slice(0, 60);
+
   const article = {
     id,
     title,
-    slug: `financial-column-${dateStr}`,
+    slug,
     status: 'published',
-    category: 'Markets',
+    category,
+    heroImage: heroImage.url,
     createdAt: now.toISOString(),
     updatedAt: now.toISOString(),
     publishedAt: now.toISOString(),
-    blocks
+    blocks,
   };
-  
-  // Save JSON file
+
   const jsonPath = path.join(articlesDir, `${id}.json`);
   fs.writeFileSync(jsonPath, JSON.stringify(article, null, 2));
-  
-  console.log(chalk.green(`    ✓ Article saved to CMS: ${id}`));
+
+  console.log(chalk.green(`    ✓ Article saved: "${title}"`));
   return jsonPath;
 }
 
@@ -63,7 +90,7 @@ async function saveToCMS(markdown) {
  * Main orchestrator for the Financial Column pipeline
  */
 async function main() {
-  console.log(chalk.bold.cyan('\n📰 THE DAILY FINANCIAL COLUMN\n'));
+  console.log(chalk.bold.cyan('\n📰 CAPITAL BRIEF — PIPELINE\n'));
   console.log(chalk.gray('  Generating your financial brief...\n'));
 
   try {
@@ -118,7 +145,7 @@ async function main() {
     }
 
     // Save to CMS
-    await saveToCMS(columnMarkdown);
+    await saveToCMS(columnMarkdown, rankedStories);
 
     console.log(chalk.green('\n✅ Done!\n'));
     

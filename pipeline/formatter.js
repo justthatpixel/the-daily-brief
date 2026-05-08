@@ -129,7 +129,7 @@ function toTerminal(markdown) {
   const bar = '━'.repeat(w);
   
   console.log('\n' + chalk.dim(bar));
-  console.log(chalk.bold.white('  THE DAILY FINANCIAL COLUMN'));
+  console.log(chalk.bold.white('  CAPITAL BRIEF'));
   console.log(chalk.dim(bar));
   
   for (const block of blocks) {

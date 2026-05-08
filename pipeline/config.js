@@ -23,4 +23,9 @@ module.exports = {
     key: process.env.ALPHA_VANTAGE_KEY,
     baseUrl: 'https://www.alphavantage.co/query',
   },
+
+  // Pexels — free image API (https://www.pexels.com/api/)
+  pexels: {
+    key: process.env.PEXELS_API_KEY || '',
+  },
 };

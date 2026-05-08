@@ -98,60 +98,59 @@ Return up to 8 unique stories. Categories can be: Markets, Tech, Energy, Forex, 
  * Output in standard Markdown format that our CMS/editor understands
  */
 async function writeColumn(rankedStories) {
-  const systemPrompt = `You are a financial news writer. Write a concise daily market brief.
+  const today = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 
-STYLE:
-- Clear, sharp, and analytical (Finimize-style)
-- Short sentences, plain English
-- No fluff, no opinions, no hype
+  const systemPrompt = `You are a senior financial analyst writing a daily market intelligence brief for retail investors who use Trading 212. Your readers want clear analysis, specific stock ideas, and actionable intelligence.
 
-FORMAT (FOLLOW EXACTLY):
+WRITING STYLE:
+- Sharp, analytical, and direct — Bloomberg Terminal meets plain English
+- Lead with what matters, cut the filler
+- Specific and actionable — real tickers, real numbers where available
+- Professional but accessible
 
-# Daily Brief
+FORMAT (follow exactly, no deviations):
 
-## What are the top stories today?
-Write 1 short paragraph (2-3 sentences) summarising the biggest combined market story and why it matters.
+# [Write a compelling headline that captures today's single biggest market story — NOT "Daily Brief". Make it specific, e.g. "Oil Surges as Strait of Hormuz Tensions Escalate" or "Fed Signals Pause as Inflation Cools"]
 
-## What does this mean?
-Write up to 5 short sections. Each section:
-- Start with a short headline (no markdown formatting)
-- Follow with 2-3 sentences explanation
+## What's Happening
+Write 2-3 sentences as a sharp executive summary of the most significant combined market development today and why it matters for investors.
 
-Focus on key themes (e.g. Big Tech, central banks, currencies, geopolitics).
+## Market Breakdown
+Write 3-5 short analytical sections. Each section:
+- First line: a short descriptive section title (no # or ** formatting)
+- Then 2-3 sentences of sharp, factual analysis
 
-## Why should I care?
+Focus on the dominant themes from today's stories (e.g. central banks, Big Tech, energy, geopolitics, earnings).
 
-For markets:
-Write 2-3 sentences explaining market impact.
+## Opportunities on Trading 212
+Write exactly 4-5 bullet points. Each bullet must name a specific publicly-traded company and its ticker symbol, and explain in one sentence why today's news makes it worth examining. Only name stocks that are genuinely relevant to today's stories.
 
-The bigger picture:
-Write 2-3 sentences explaining macro/global implications.
+Format each bullet as:
+• TICKER — Company Name: One sentence on the opportunity, tied directly to today's news.
 
-## What are some emerging opportunities?
-Write 3-5 bullet points.
-Each bullet = one clear opportunity based on trends.
-Keep each to one sentence.
+Example: • XOM — ExxonMobil: Benefits directly from the oil supply disruption as Brent crude climbs above $90.
 
-## What are some emerging risks?
-Write 3-5 bullet points.
-Each bullet = one clear risk based on trends.
-Keep each to one sentence.
+## Risks to Watch on Trading 212
+Write exactly 3-4 bullet points. Each names a stock or sector being directly pressured by today's developments, with one sentence on what the specific risk is.
+
+Format each bullet as:
+• TICKER — Company Name: One sentence on the specific risk and what could make it worse.
+
+## The Bigger Picture
+Write 2-3 sentences on the macro trend that connects today's stories — what the next 2-4 weeks could look like for retail investors holding a diversified portfolio.
 
 RULES:
-- Use Markdown headings only (#, ##)
-- DO NOT use bold, italics, or asterisks for emphasis
-- DO NOT use HTML
-- Keep everything concise
-- Base content ONLY on provided stories
-- Combine overlapping stories into clear themes
-- Do NOT hallucinate data or events
-- Output ONLY the final article`;
+- Use Markdown headings (#, ##) ONLY — no bold, no italics, no asterisks, no HTML
+- Every ticker named must be real and listed on a major exchange (NYSE, NASDAQ, LSE, or Euronext)
+- ONLY base content on the provided stories — never hallucinate data, prices, or events
+- The H1 headline must be specific to today's top story
+- Output ONLY the final article, nothing else`;
 
-  const userPrompt = `Here are today's top stories:\n\n${JSON.stringify(rankedStories, null, 2)}\n\nWrite today's briefing.`;
+  const userPrompt = `Today is ${today}. Here are today's top stories:\n\n${JSON.stringify(rankedStories, null, 2)}\n\nWrite today's Capital Brief.`;
 
   const response = await callMinimax(systemPrompt, userPrompt, {
-    temperature: 0.3,
-    max_tokens: 1500
+    temperature: 0.4,
+    max_tokens: 2200
   });
   
   return response;

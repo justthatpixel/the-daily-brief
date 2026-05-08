@@ -37,10 +37,10 @@ export default function ReaderLayout({ darkMode, setDarkMode }) {
         <div className="max-w-5xl mx-auto px-6 pt-6 pb-4">
           <div className="border-b-2 border-t-2 border-headline dark:border-dark-headline py-4 text-center">
             <h1 className="serif text-4xl md:text-5xl font-bold tracking-tight text-headline dark:text-dark-headline leading-none">
-              The Daily Mubin
+              Capital Brief
             </h1>
             <p className="text-xs text-muted dark:text-dark-muted mt-2 tracking-widest uppercase font-medium">
-              AI-Powered Financial Intelligence
+              Intelligent Financial News
             </p>
           </div>
 
@@ -81,8 +81,8 @@ export default function ReaderLayout({ darkMode, setDarkMode }) {
         <div className="max-w-5xl mx-auto px-6 py-8">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div>
-              <p className="serif text-xl font-bold text-headline dark:text-dark-headline">The Daily Mubin</p>
-              <p className="text-xs text-muted dark:text-dark-muted mt-1">AI-powered financial news aggregation</p>
+              <p className="serif text-xl font-bold text-headline dark:text-dark-headline">Capital Brief</p>
+              <p className="text-xs text-muted dark:text-dark-muted mt-1">Intelligent financial news aggregation</p>
             </div>
             <div className="flex items-center gap-6 text-xs text-muted dark:text-dark-muted">
               <a href="/admin" className="hover:text-accent dark:hover:text-dark-accent transition-colors">

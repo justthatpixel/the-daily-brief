@@ -32,7 +32,7 @@ export default function AdminLayout() {
       <aside className="w-56 bg-masthead text-white flex flex-col shrink-0">
         {/* Logo */}
         <div className="px-5 py-5 border-b border-white/10">
-          <p className="serif text-base font-bold leading-tight">The Daily Mubin</p>
+          <p className="serif text-base font-bold leading-tight">Capital Brief</p>
           <p className="text-xs text-white/50 mt-0.5 tracking-wider uppercase">Admin Studio</p>
         </div>
 

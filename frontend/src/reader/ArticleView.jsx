@@ -96,11 +96,15 @@ export default function ArticleView() {
     weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
   });
 
+  // Find hero image block (first image block in the article)
+  const heroBlock = article.blocks?.find(b => b.type === 'image' && b.url);
+  const contentBlocks = article.blocks?.filter(b => !(b.type === 'image' && b.url === heroBlock?.url));
+
   return (
     <div className="max-w-2xl mx-auto">
 
       {/* Back */}
-      <div className="mb-8">
+      <div className="mb-6">
         <Link
           to="/reader"
           className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase text-muted dark:text-dark-muted hover:text-accent dark:hover:text-dark-accent transition-colors"
@@ -137,9 +141,26 @@ export default function ArticleView() {
         </button>
       </div>
 
+      {/* Hero image */}
+      {heroBlock && (
+        <figure className="mb-8 -mx-0">
+          <img
+            src={heroBlock.url}
+            alt={heroBlock.alt || ''}
+            className="w-full object-cover"
+            style={{ maxHeight: '420px' }}
+          />
+          {heroBlock.caption && (
+            <figcaption className="text-xs text-muted dark:text-dark-muted mt-2 font-sans">
+              {heroBlock.caption}
+            </figcaption>
+          )}
+        </figure>
+      )}
+
       {/* Article body */}
       <div className="article-body">
-        {article.blocks?.map((block, i) => {
+        {(contentBlocks || article.blocks)?.map((block, i) => {
           switch (block.type) {
             case 'h1':
               return (
@@ -202,7 +223,7 @@ export default function ArticleView() {
           ← Back to feed
         </Link>
         <span className="serif text-sm font-bold text-headline dark:text-dark-headline opacity-40">
-          The Daily Mubin
+          Capital Brief
         </span>
       </div>
     </div>
