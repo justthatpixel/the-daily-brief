@@ -1,4 +1,8 @@
 # The Daily Brief
+<img width="1237" height="399" alt="Screenshot 2026-05-15 at 19 07 50" src="https://github.com/user-attachments/assets/81d5a1a4-4e8e-4dfb-a631-61eda18a950f" />
+
+
+
 
 An AI-powered financial news aggregator that fetches headlines from multiple sources, deduplicates and ranks them using a large language model, then generates a structured market intelligence article with editorial formatting, hero images, and actionable stock picks.
 
